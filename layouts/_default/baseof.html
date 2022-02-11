@@ -17,15 +17,32 @@
     <main class="main">
         {{- block "main" . }}{{ end }}
     {{ $somevar := "spam"}}
-    <form action="javascript:;"  onsubmit="getGeneration(p, n)">
-        p: <input type="number" name="p" min="0" max="1" step="0.01"><br>
-        Effective size: <input type="number" name="n" min = "0"m max="1000000"><br><br>
-        <button type="submit">
-          Submit
-        </button>
-      </form>
-    <button onclick="myFunction( {{ $somevar}} )">Click me</button>
+    <div>
+        <form action="javascript:;"  onsubmit="getGeneration(p, n)">
+        p: <input type="number" name="p" min="0" max="1" step="0.01" value="0.5"><br>
+        q: <input type="number" name="q" min="0" max="1" step="0.01" value="0.5"><br>
+        Effective size: <input type="number" name="n" min = "0"m max="1000000" value="10"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <table id="output">
+      <tr>
+        <td>Red Red</td>
+        <td id="rROutput"></td>
+      </tr>
+      <tr>
+        <td>Red Yellow</td>
+        <td id="rYOutput"></td>
+      </tr>
+      <tr>
+        <td>Yellow Red</td>
+        <td id="yROutput"></td>
+      </tr>
+      <tr>
+        <td>Yellow Yellow</td>
+        <td id="yYOutput"></td>
+      </tr>
     </main>
+    </div>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
 

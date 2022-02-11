@@ -26,7 +26,15 @@ function getGeneration(p, n) {
       result.yellowYellow++;
     }
   }
-  alert("You got " + result.redRed + " and " + result.redYellow + ", " + result.yellowRed + ", " + result.yellowYellow);
+  // There is probably a smarter way to do this
+  rROutput = document.querySelector('#rROutput');
+  rYOutput = document.querySelector('#rYOutput');
+  yROutput = document.querySelector('#yROutput');
+  yYOutput = document.querySelector('#yYOutput');
+  rROutput.textContent = result.redRed;
+  rYOutput.textContent = result.redYellow;
+  yROutput.textContent = result.yellowRed;
+  yYOutput.textContent = result.yellowYellow;
 }
 
 // Model p as prob of red q as prob of yellow
