@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq $.Site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    {{ $somevar := "spam"}}
+    <form action="javascript:;"  onsubmit="getGeneration(p, n)">
+        p: <input type="number" name="p" min="0" max="1" step="0.01"><br>
+        Effective size: <input type="number" name="n" min = "0"m max="1000000"><br><br>
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+    <button onclick="myFunction( {{ $somevar}} )">Click me</button>
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>
