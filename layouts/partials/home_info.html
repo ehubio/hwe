@@ -5,6 +5,42 @@
     </header>
     <section class="entry-content">
         <p>{{ .Content | markdownify }}</p>
+        <br/>
+            <form class=prob action="javascript:;"  onsubmit="getGeneration(p, n)">
+                <label for="p">p</label>
+                <input type="number" name="p" min="0" max="1" step="0.01" value="0.5">
+                <label for="q">q</label>
+                <input type="number" name="q" min="0" max="1" step="0.01" value="0.5">
+                <label for="n">Effective Size</label>
+                <input type="number" name="n" min = "0"m max="1000000" value="10">
+                <button type="submit">Submit</button>
+            </form>
+            <table id="output">
+                <thead>
+                    <tr>
+                        <th class="category">Category</th>
+                        <th class="count">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Red Red</td>
+                        <td id="rROutput"></td>
+                    </tr>
+                    <tr>
+                        <td>Red Yellow</td>
+                        <td id="rYOutput"></td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Red</td>
+                        <td id="yROutput"></td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Yellow</td>
+                        <td id="yYOutput"></td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
     <footer class="entry-footer">
         {{ partial "social_icons.html" $.Site.Params.socialIcons }}

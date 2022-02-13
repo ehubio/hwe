@@ -1,4 +1,8 @@
-baseURL: https://ehubio.github.io/hwe 
+baseURL: https://ehubio.github.io/hwe
 languageCode: en-us
-title: SCI1116 Genetics & Evolution 
+title: SCI1116 Genetics & Evolution
 theme: "PaperMod"
+params:
+  defaultTheme: light
+  homeInfoParams:
+    Content: Do you want to include some text here?
