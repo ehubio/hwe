@@ -39,6 +39,8 @@ function input_valid(p, q) {
   var valid = p + q == 1.00;
   if (!valid) {
     document.getElementById("imsg").innerHTML = "p and q must add up to 1";
+  } else {
+    document.getElementById("imsg").innerHTML = "";
   }
   return valid;
 }
