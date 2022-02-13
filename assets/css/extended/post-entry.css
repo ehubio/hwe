@@ -112,6 +112,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     background-color: var(--entry);
+    -moz-appearance: textfield;
 }
 
 .entry-cover, input[type=number], textarea {
@@ -148,7 +149,7 @@
 }
 
 .entry-content #output thead {
-    background-color: var(--entry);
+    background-color: var(--code-bg);
 }
 
 
