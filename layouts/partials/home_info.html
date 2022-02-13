@@ -6,13 +6,14 @@
     <section class="entry-content">
         <p>{{ .Content | markdownify }}</p>
         <br/>
-            <form class=prob action="javascript:;"  onsubmit="getGeneration(p, n)">
+            <form class=prob action="javascript:;"  onsubmit="getGeneration(p, q, n)">
                 <label for="p">p</label>
-                <input type="number" name="p" min="0" max="1" step="0.01" value="0.5">
+                <input type="number" name="p" min="0" max="1" step="0.01" value="0.5" required>
                 <label for="q">q</label>
-                <input type="number" name="q" min="0" max="1" step="0.01" value="0.5">
+                <input type="number" name="q" min="0" max="1" step="0.01" value="0.5" required>
                 <label for="n">Effective Size</label>
-                <input type="number" name="n" min = "0"m max="1000000" value="10">
+                <input type="number" name="n" min = "0"m max="1000000" value="10" required=>
+                <div id="imsg" style="font-weight:700;color:#e85047"></div>
                 <button type="submit">Submit</button>
             </form>
             <table id="output">
