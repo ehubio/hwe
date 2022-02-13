@@ -1,3 +1,3 @@
-# allele
+# hwe 
 
-Simple site for randomly sampling from populations gene pool to generate genotypes.
+Simple site for Hardy Weinberg equilibrium practical
