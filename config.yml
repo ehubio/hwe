@@ -5,4 +5,4 @@ theme: "PaperMod"
 params:
   defaultTheme: light
   homeInfoParams:
-    Content: Do you want to include some text here?
+    Content: Set allele frequencies and effective population size
